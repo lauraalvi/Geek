@@ -1,0 +1,158 @@
+*{
+    --main-color:#ffe8dd;
+    --bg-color:#f0cfbf;
+    --second-color: #ffffff;
+    --color: #f45c5c;
+    --color-less: #f28989;
+    --var-black:#000000;
+}
+
+html{
+    background: var(--bg-color);
+    font-size: 60%;
+}
+
+/*HEADER*/
+
+header{
+    width: 100%;
+    background: var(--color);
+    padding: 60px;
+    text-align: center;
+    box-shadow: 0 4px 8px var(--main-color);
+}
+
+header h1{
+    font-size: 36px;
+    font-weight: bold;
+    color: var(--main-color);
+}
+
+.header{
+    /*width: 90%;*/
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/*BODY*/
+
+
+.container {
+    width: 80%;
+    display: grid;
+    grid-template-columns: 60% 40%;
+    align-items: start;
+    gap: 5rem;
+    padding: 2rem;
+}
+
+.misProductos{
+    width: 80%;
+    display: grid;
+    grid-template-columns: 32% 32% 32%;
+    align-items: center;
+    gap: 2%;
+    border: 2px solid var(--main-color);
+    border-radius: 5%;
+    box-shadow: 2px 2px 5px var(--color);
+    padding: 5%;
+    margin: 5%;
+}
+
+.ramo{ /*No lo entiendo pero asÃ­ se muestran mejor los ramos*/
+    background-color: var(--main-color);
+    border: 1px solid var(--second-color);
+    padding: 5%;
+    margin: 5%;
+    text-align: center;
+    border-radius: 5%;
+    transition: transform 0.3s, box-shadow 0.3s; /* AÃ±ade una transiciÃ³n suave */
+}
+
+.ramo:hover{
+    transform: translateY(-10px); /* Mueve el cuadro hacia arriba */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* AÃ±ade sombra para el efecto de sobresalir */
+}
+
+.ramo img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; /* Centra la imagen horizontalmente */
+    border: none;
+    border-radius: 5%;
+}
+
+.carritoCompras{
+    border: 3px solid var(--main-color);
+    padding: 5%;
+    margin: 5%;
+    border-radius: 5%;
+    box-shadow: 2px 2px 5px var(--color);
+}
+
+.infoProducto input[type="text"]{
+    width: 100%;
+    padding: 10px;
+    margin: 5px 0 10px 0;
+    border: 1px solid var(--main-color);
+    border-radius: 10%;
+    box-sizing: border-box;
+}
+
+.botonesProducto button { 
+    background-color: var(--color);
+    border: none;
+    color: var(--second-color);
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: var(--color-less) 0.3s ease;
+}
+
+.botonesProducto button:hover{
+    background-color: var(--color-less);
+}
+
+.botonesProducto button:active{
+    background-color: var(--color);
+}
+
+/*FOOTER*/
+
+footer{
+    background: var(--color);
+    width: 100%;
+    padding: 1rem;
+}
+
+.footer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* RESPONSIVE DESIGN 
+
+@media (max-width: 768px) {
+    .container {
+        grid-template-columns: 1fr;
+    }
+
+    .misProductos {
+        grid-template-columns: 1fr;
+    }
+
+    .ramo, .carritoCompras {
+        width: 100%;
+    }
+}*/
